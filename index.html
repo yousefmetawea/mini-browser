@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Browser</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+  <h1>Mini Browser</h1>
+
+  <!-- Top toolbar -->
+  <div class="toolbar">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <div class="addr-bar">mini-browser://preview</div>
+  </div>
+
+  <!-- Editors -->
+  <div class="editors">
+    <div class="editor-wrap">
+      <div class="editor-label">
+        <span class="badge html">HTML</span> HTML Editor
+      </div>
+      <textarea id="html-input" spellcheck="false"><h1>Hello, Mini Browser!</h1>
+<p>This is a <strong>paragraph</strong> with some text.</p>
+<ul>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+</ul>
+<button>Click Me</button></textarea>
+    </div>
+
+    <div class="editor-wrap">
+      <div class="editor-label">
+        <span class="badge css">CSS</span> CSS Editor
+      </div>
+      <textarea id="css-input" spellcheck="false">body {
+  font-family: sans-serif;
+  padding: 24px;
+  background: #f9fafb;
+}
+
+h1 {
+  color: #1d4ed8;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #374151;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 20px;
+  color: #555;
+}
+
+li {
+  margin: 6px 0;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}</textarea>
+    </div>
+  </div>
+
+  <!-- Render button -->
+  <button class="run-btn" onclick="render()">▶ Render</button>
+
+  <!-- Preview toolbar -->
+  <div class="preview-bar">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <div class="preview-bar-title">preview</div>
+  </div>
+
+  <!-- Preview iframe -->
+  <iframe id="preview" title="Preview"></iframe>
+
+  <div class="preview-bottom"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
